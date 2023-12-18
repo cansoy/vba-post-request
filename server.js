@@ -6,6 +6,7 @@ import cors from "cors"
 
 const server=express()
 server.use(cors())
+server.use(express.json({ limit: '100mb' }))
 const PORT =process.env.PORT|| 3000
 
 server.get("/",(req,res)=>{
